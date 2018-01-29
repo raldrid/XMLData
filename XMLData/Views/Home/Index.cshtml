@@ -1,0 +1,30 @@
+﻿@using XMLData.Models
+
+@model IEnumerable<Photos>
+<h4>@ViewBag.Title</h4>
+
+<style>
+    body{font-family:Verdana, Geneva, Tahoma, sans-serif; font-size:small;}
+    td {padding:5px;}
+</style>
+
+        @foreach (Photos photo in Model)
+        {
+            <div>Photo&nbsp;@photo.PhotoId&nbsp;of&nbsp;@ViewBag.PhotoCount</div>
+            <div>
+                @if (@photo.PhotoId > 1) {
+                    @Html.ActionLink("Prev", "Index", "Home", new { id = (@photo.PhotoId - 1) }, null)
+                }&nbsp;Index&nbsp;
+                @if(@photo.PhotoId + 1 < @ViewBag.PhotoCount) {
+                    @Html.ActionLink("Next", "Index", "Home", new { id = (@photo.PhotoId + 1) }, null)
+                }
+            </div>
+            <div>
+                <image src="~/@photo.File" />
+            </div>
+            <div>
+                <strong>@photo.TCaption</strong><br/>
+                @photo.Caption<br/>
+                <small>@photo.Date</small>
+            </div>
+        }
