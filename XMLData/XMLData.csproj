@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TripsController.cs" />
     <Compile Include="Models\Photos.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -252,7 +253,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\PhotoIndex.cshtml" />
+    <Content Include="Views\Trips\PhotoIndex.cshtml" />
+    <Content Include="Views\Trips\Index.cshtml" />
+    <Content Include="Views\Trips\SantaCatalinaPhotos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\SantaCatalinaPhotos\thumbnails\" />
